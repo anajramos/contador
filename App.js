@@ -1,20 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import react, { useState } from "react";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  // A lógica vai aqui
+  const [contador, setContador] = useState(0);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  function incrementar() {
+    setContador(contador + 1); // O Grito de Atualização
+  }
+
+  function decrementar() {
+    setContador(contador - 1); // O Grito de Atualização
+  }
+
+
+ return ( /* O visual vai aqui */ );
+  
+}
